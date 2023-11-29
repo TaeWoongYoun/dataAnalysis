@@ -30,7 +30,8 @@ header{
   height:100px;
   display:flex;
   justify-content: space-between;
-  background:#0066ad;
+  background: aliceblue;
+  
 }
 .logo{
   width:20%;
@@ -39,10 +40,7 @@ header{
   justify-content: center; /* 수평 가운데 정렬 */
   align-items: center; /* 수직 가운데 정렬 */
 }
-.logo > img {
-  width:200px; /*지시사항에 적힌대로 width값 */
-  height:40px; /*지시사항에 적힌대로 height값 */
-}
+
 
 /*메인메뉴*/
 .navi{
@@ -179,24 +177,24 @@ header{
 }
 .gallery li:hover{ opacity:0.5; }
 
-/*배너와 바로가기 공통 */
-.banner, .direct{
+/*시설영상 홍보영상 공통 */
+.direct1, .direct2{
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-/* 배너 이미지 */
-.banner{
-  background: url("image/banner.jpg") center center ;
+/* 홍보영상 이미지 */
+.direct1{
+  background: url("") center center ;
 }
-/* 바로가기 이미지 */
-.direct{
-  background: url("image/direct.jpg") center center ;
+/* 시설영상 이미지 */
+.direct2{
+  background: url("") center center ;
 }
 /* 배너, 바로가  글자 스타일 */
-.banner > a,
-.direct > a{
+.direct1 > a,
+.direct2 > a{
   width:50%;
   padding:14px 0;
   text-align:center;
@@ -204,8 +202,8 @@ header{
   font-weight:bold;
 	background-color:rgba(0, 102, 173, 0.4);
 }
-.banner > a:hover,
-.direct > a:hover{
+.direct1 > a:hover,
+.direct2 > a:hover{
   background-color:rgba(255,255,255, 0.5);
   color:#222328;
 }
@@ -246,43 +244,43 @@ footer > div:nth-last-of-type(1) {width:60%;} /* footerGroup */
   color:#ffffff;
 }
 
-/* 레이어 팝업  */
-#modalWrap{
-  display:none;
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  z-index: 1;
-}
-#modalWrap.active{
-  display:block;
-}
-.modal{
-  position:fixed;
-  width:350px;
-  padding:20px;
-  top:40%;
-  left:37%;
-  background:#ffffff;
-}
-.modal > h1{
-  margin:10px 0;
-  text-align: center;
-  letter-spacing: -1px;
-}
-.modal > p{
-  text-align:justify;
-}
-.btn{
-  width:100%;
-  padding:10px;
-  margin-top:20px;
-  background: #0066ad;
-  color:#ffffff;
-  border:0;
-  font-weight:bold;
-  cursor:pointer;
-}
-.btn:hover{background:rgba(0,102,173,0.2); color:#0066ad;}
+  /* 레이어 팝업  */
+  #modalWrap{
+    display:none;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: 1;
+  }
+  #modalWrap.active{
+    display:block;
+  }
+  .modal{
+    position:fixed;
+    width:350px;
+    padding:20px;
+    top:40%;
+    left:37%;
+    background:#ffffff;
+  }
+  .modal > h1{
+    margin:10px 0;
+    text-align: center;
+    letter-spacing: -1px;
+  }
+  .modal > p{
+    text-align:justify;
+  }
+  .btn{
+    width:100%;
+    padding:10px;
+    margin-top:20px;
+    background: #0066ad;
+    color:#ffffff;
+    border:0;
+    font-weight:bold;
+    cursor:pointer;
+  }
+  .btn:hover{background:rgba(0,102,173,0.2); color:#0066ad;}
