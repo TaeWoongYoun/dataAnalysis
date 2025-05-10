@@ -1,5 +1,6 @@
 import pandas as pd
 import yfinance as yf
+import datetime as dt
 
-df_tsla = yf.download('TSLA', start='2021-11-01', end='2023-03-31')
-df_tsla.to_excel("./TSLA_OHLCV1.xlsx")
+df_tsla = yf.download('TSLA', start='2021-11-01', end=dt.date.today())
+df_tsla.to_excel("./TSLA_OHLCV_TODAY.xlsx")
