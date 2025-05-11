@@ -1,13 +1,13 @@
 import pandas as pd
-import yfinance as yf
+import matplotlib.pyplot as plt
 
-tsla = yf.download('TSLA', start='2021-11-01', end='2023-03-31')
-df_tsla = pd.DataFrame(tsla['Close'])
-df_tsla.head()
+df = pd.read_csv('TSLA_OHLCV.csv')
+
+df_tsla = pd.DataFrame(df['Close'])
 df_tsla = df_tsla.reset_index()
 df_tsla.columns = ['date', 'value']
 df_tsla['date'] = pd.to_datetime(df_tsla['date'])
-import matplotlib.pyplot as plt
+df_tsla['value'] = pd.to_numeric(df_tsla['value'], errors='coerce')
 
 # 데이터 분할하기
 df_tsla_train = pd.DataFrame(df_tsla['value'][:int(0.8*len(df_tsla))])
